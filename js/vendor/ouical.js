@@ -66,13 +66,15 @@
         ics: function(event, eClass, calendarName) {
             var startTime = formatTime(event.start);
             var endTime = calculateEndTime(event);
-
+            var currentURL = document.URL;
+            var sanitizedURL = currentURL.split('#')[0]; // Sanitise the URL by splitting at '#' and keeping the first part
+            
             var href = encodeURI(
                 'data:text/calendar;charset=utf8,' + [
                     'BEGIN:VCALENDAR',
                     'VERSION:2.0',
                     'BEGIN:VEVENT',
-                    'URL:' + document.URL,
+                    'URL:' + sanitizedURL,
                     'DTSTART:' + (startTime || ''),
                     'DTEND:' + (endTime || ''),
                     'SUMMARY:' + (event.title || ''),
