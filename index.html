@@ -1,3 +1,538 @@
-<html>
-  <h1>hello world</h1>
-</html>
+<!-- Source: https://github.com/rampatra/wedding-website -->
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <title>Joshua & Kahlia forever!</title>
+    <meta name="description" content="We would like to invite you to our engagement celebration.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#ffffff">
+    <meta property="og:title" content="Joshua & Kahlia forever">
+    <meta property="og:description" content="We would like to invite you to our engagement celebration.">
+    <meta property="og:image" content="img/hero-min.jpg">
+    <meta property="og:type" content="website">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="manifest.json">
+    <link rel="mask-icon" href="safari-pinned-tab.svg">
+
+    <script>
+        // load css files from CDN if local node_modules fail
+        function loadCssFromCDN(css) {
+            // create new link tag
+            const link = document.createElement('link');
+            if (css === 'animate.css') {
+                link.href = 'https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css';
+            } else if (css === 'font-awesome.css') {
+                link.href = 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css';
+            }
+            link.rel = 'stylesheet';
+
+            // add link tag to head section
+            document.getElementsByTagName('head')[0].appendChild(link);
+        }
+
+        // load js files from CDN if local node_modules fail
+        function loadJsFromCDN(js) {
+            if (js === 'waypoints.js') {
+                document.write('<script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.js"><\/script>');
+            } else if (js === 'jquery.js') {
+                document.write('<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"><\/script>');
+            }
+        }
+    </script>
+
+    <link rel="stylesheet" href="css/normalize.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/jquery.fancybox.css">
+    <link rel="stylesheet" href="css/flexslider.css">
+    <link rel="stylesheet" href="css/styles.min.css">
+    <link rel="stylesheet" href="css/queries.css">
+    <link rel="stylesheet" href="node_modules/animate.css/animate.min.css" onerror="loadCssFromCDN('animate.css')">
+    <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css" onerror="loadCssFromCDN('font-awesome.css')">
+    <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+</head>
+<body id="top">
+<section class="hero">
+    <section class="navigation">
+        <header>
+            <div class="header-content">
+                <div class="logo"><a href="#"><img src="img/logo.png" alt="Logo"></a></div>
+                <div class="header-nav" >
+                    <nav>
+                        <ul class="primary-nav">
+                            <li><a href="#intro">WHY WAIT</a></li>
+                            <li><a href="#events">Events</a></li>
+                            <li><a href="#instagram">Instagram</a></li>
+                            <li><a href="#eng-pics">Engagement</a></li>
+                        </ul>
+                        <ul class="member-actions">
+                            <li class="hidden-sm hidden-xs"><a href="#video-bg" class="login">Venue</a></li>
+                            <li class="hidden-md hidden-lg"><a href="#map" class="login">Venue</a></li>
+                            <li><a href="#rsvp" class="btn-white btn-small">RSVP</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="navicon">
+                    <a class="nav-toggle" href="#"><span></span></a>
+                </div>
+            </div>
+        </header>
+    </section>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-10 col-md-offset-1">
+                <div class="hero-content text-center">
+                    <div class="col-md-12 hidden-xs hidden-sm">
+                    <object data="img/logo-lg.svg" type="image/svg+xml" width="491" height="250"></object>
+                    </div>
+                    <div class="col-md-12 hidden-md hidden-lg">
+                        <div class="col-md-4">
+                            <object data="img/logo-lg-joshua.svg" type="image/svg+xml" width="180" height="34"></object>
+                        </div>
+                        <div class="col-md-4">
+                            <object data="img/logo-lg-glasses.svg" type="image/svg+xml" width="81" height="85"></object>
+                        </div>
+                        <div class="col-md-4">
+                            <object data="img/logo-lg-kahlia.svg" type="image/svg+xml" width="180" height="30"></object>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12 hidden-xs hidden-sm text-center"><a href="#rsvp" class="btn btn-accent btn-large rsvp-btn">RSVP</a></div>
+        </div>
+    </div>
+    <div class="down-arrow floating-arrow"><a href="#invitation"><i class="fa fa-angle-down"></i></a></div>
+</section>
+
+<section id="invitation" class="section-padding">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <h3>She said yes!</h3>
+                <p>We're celebrating on the 11<sup>th</sup> of November 2023 and we would like you to be a part of it.</p>
+                <div class="share-bar"></div>
+            </div>
+            <div class="col-md-4 col-md-offset-4 text-center">
+                <a class="btn btn-accent btn-small" data-toggle="modal" data-target="#disclaimer-modal">
+                    <i class="fa fa-barcode"></i>&nbsp;&nbsp;Legal Stuff
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="intro">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3 hidden-sm hidden-xs"><img src="img/IMG_2317.png" class="wp1"></div>
+            <div class="col-md-6">
+                <div class="col-md-12 text-center">
+                    <h3 class="header">WHY WAIT TO CELEBRATE</h3>
+                </div>
+                <p>After almost 8 years we are thrilled to announce our engagement and would like to invite you to join us in celebrating this joyous occasion. The festivities will take place at Boatrocker Brewers &amp; Distillers (Braeside, Victoria) on the 11th of November 2023 at 12pm.</p>
+                <p>If the last 3 years have taught us anything its that we don't know what the future holds, we want to celebrate our engagement with our loved ones now, whilst we continue to plan our happily ever after for the Spring of 2025. 😊</p>
+            </div>
+            <div class="col-md-3 hidden-sm hidden-xs"><img src="img/DSD_0214.png" class="wp2"></div>
+        </div>
+        <div class="row">
+            <div class="col-sm-4 col-sm-push-2 col-xs-6 hidden-md hidden-lg"><img src="img/IMG_2317.png" class="wp8"></div>
+            <div class="col-sm-4 col-sm-push-2 col-xs-6 hidden-md hidden-lg"><img src="img/DSD_0214.png" class="wp9"></div>
+        </div>
+    </div>
+</section>
+
+<section class="events section-padding" id="events">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h3 class="header">Events</h3>
+                <p>Join us for a series of relaxed get-togethers in the days leading up to, and after the engagement party, as outlined below. To help us ensure we have the right reservations in place, kindly inform Joshua or Kahlia of your interest in attending any or all of these celebration events.</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 col-sm-12 col-xs-12 leftcol">
+                <div class="wp3">
+                    <p><strong>9th November</strong></p>
+                    <h5>Trivia Night <span class="time">7PM - 9PM</span></h5>
+                    <p>Join us for Trivia at Boatrocker hosted by Ben Soresen. Trivia starts at 7pm and usually runs until about 9pm. There are always drink and food specials including $10 G&amp;Ts you wont regret... but if you can&#39;t make it, we will be back at Boatrocker on Saturday for the main event.</p>
+                </div>
+                <div class="wp5">
+                    <p><strong>10th November</strong></p>
+                    <h5>Dinner at Liberty 🗽<span class="time">7PM - 9PM</span></h5>
+                    <p>Hailing from Helensville in Auckland, New Zealand, Liberty has opened their first Australian tap room. Join us for a casual drink and some dinner (I believe its Vietnamese on Fridays).</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-sm-12 col-xs-12 rightcol">
+                <div class="wp4">
+                    <p><strong>11th November</strong></p>
+                    <h5>Engagement Party <span class="time">12PM-4PM</span></h5>
+                    <p>The main event, - Do we need to say more...</br>Following the celebrations at Boatrocker we will be kicking on to two other venues.</p>
+                </div>
+                <div class="wp6">
+                    <h5>Session at Braeside <span class="time">4PM-6PM</span></h5>
+                    <p> Braeside is another local brewery, walking distance from Boatrocker it will be stop number 1. Braeside always has a great selection of beer fresh on tap, it was founded in 2018 and produces over 1500 cans of beer a week from their brewhouse inside the tap room. It is a must have stop on the way.</p>
+                </div>
+                <div class="wp6">
+                    <h5>Dinner at Mates <span class="time">6PM-Late</span></h5>
+                    <p>We&#39;ll finish the day at mates. Bar &amp; Bottleshop. With a large range of beverages in fridges, on tap, and food nearby, it will send off the night nicely.
+                </div>
+            </div>
+        </div>
+        <div class="row section-padding">
+            <div class="col-md-4 col-md-offset-4 text-center">
+                <a class="btn btn-accent btn-small" data-toggle="modal" data-target="#dc-modal">
+                    <i class="fa fa-barcode"></i>&nbsp;&nbsp;What Next?
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div id="dc-modal" class="modal fade" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span>&times;</span>
+                    </button>
+                    <h3 class="text-center section-padding">STAY TUNED WEDDING WEBSITE COMING SOON!!</h3>
+                            <img src="img/wedding1.jpg" class="img-rounded img-responsive" alt="Responsive image"></br>
+                            <img src="img/wedding2.jpg" class="img-rounded img-responsive" alt="Responsive image">
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+
+    <div id="disclaimer-modal" class="modal fade" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span>&times;</span>
+                    </button>
+                    <h3 class="text-center section-padding">Disclaimer</h3>
+                    <p>This website is exclusively intended for use by individuals who have received a direct invitation from the event host or authorized personnel. If you have arrived at this website without a specific invitation, please be advised that the contents and details provided here may not apply to you.</p>
+                    <p>The information, event specifics, and materials presented on this website are tailored for the invited guests, and they may be subject to terms, conditions, or agreements specific to the event. Accessing this website without a valid invitation does not imply consent, entitlement, or relevance of the content to your circumstances.</p>
+                    <p>We encourage all users to confirm their status as an invited guest and to seek guidance from the event host or relevant authorities if they are uncertain about their eligibility to access and use the information on this website.</p>
+                    <p>By proceeding to use or access the content of this website without a valid invitation, you acknowledge and agree that you do so at your own risk and that the event host, its affiliates, partners, and contributors shall not be held responsible for any misunderstandings, misinterpretations, or consequences arising from your unauthorized use of the content.</p>
+                    <p>If you are unsure about your status as an invited guest or have questions about the event details, please exit the website and contact the event host or their designated representative. The event host reserves the right to deny access or participation to anyone not on the guest list or without a valid invitation.</p>                    
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+
+</section>
+
+<section id="instagram" class="section-padding">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <h3>A picture is worth a thousand words!</h3>
+                <p>Help us capture the moment, tag your photos with the hashtag
+                    <a href="https://instagram.com/explore/tags/JoshuaAndKahlia/" target="_blank">#JoshuaAndKahlia</a>
+                </p>
+            </div>
+        </div>
+        <div class="row section-border wp7">
+            <div class="col-md-4 col-md-offset-4">
+                <img src="img/S23.webp">
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="eng-pics" class="section-padding">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <h3 class="header">Engagement + moments</h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-2">
+                <a class="fancybox" rel="group" href="img/eng_pics/_RFX2942-lg.jpg">
+                    <div class="img-wrap">
+                        <div class="overlay">
+                            <i class="fa fa-search"></i>
+                        </div>
+                        <img src="img/eng_pics/_RFX2942-sm.jpg" alt=""/>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-2">
+                <a class="fancybox" rel="group" href="img/eng_pics/IMG_3483-lg.jpg">
+                    <div class="img-wrap">
+                        <div class="overlay">
+                            <i class="fa fa-search"></i>
+                        </div>
+                        <img src="img/eng_pics/IMG_3483-sm.jpg" alt=""/>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-2">
+                <a class="fancybox" rel="group" href="img/eng_pics/_RFX2992-lg.jpg">
+                    <div class="img-wrap">
+                        <div class="overlay">
+                            <i class="fa fa-search"></i>
+                        </div>
+                        <img src="img/eng_pics/_RFX2992-sm.jpg" alt=""/>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-2">
+                <a class="fancybox" rel="group" href="img/eng_pics/NGP_4089-lg.jpg">
+                    <div class="img-wrap">
+                        <div class="overlay">
+                            <i class="fa fa-search"></i>
+                        </div>
+                        <img src="img/eng_pics/NGP_4089-sm.jpg" alt=""/>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-2">
+                <a class="fancybox" rel="group" href="img/eng_pics/_RFX3064-lg.jpg">
+                    <div class="img-wrap">
+                        <div class="overlay">
+                            <i class="fa fa-search"></i>
+                        </div>
+                        <img src="img/eng_pics/_RFX3064-sm.jpg" alt=""/>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-2">
+                <a class="fancybox" rel="group" href="img/eng_pics/NGP_4119-lg.jpg">
+                    <div class="img-wrap">
+                        <div class="overlay">
+                            <i class="fa fa-search"></i>
+                        </div>
+                        <img src="img/eng_pics/NGP_4119-sm.jpg" alt=""/>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row hidden-lg hidden-md hidden-xs">
+            <div class="col-xs-12 section-border section-padding"></div>
+        </div>
+    </div>
+</section>
+
+<section id="video-bg" class="hidden-sm hidden-xs">
+    <div id="bgndVideo" class="player"
+         data-property="{videoURL:'https://youtu.be/FbzLJxeZ5xE',containment:'#video-bg',autoPlay:true, mute:true, showControls:false, startAt:0, stopAt:31, opacity:1}">
+    </div>
+    <div id="video-content">
+        <h5>BOATROCKER</h5>
+        <p>Brewers & Distillers</p>
+    </div>
+</section>
+
+<section id="map" class="section">
+    <div id="map-canvas"></div>
+    <div id="map-content-wrapper" class="container pointer-events-none">
+        <div class="row">
+            <div class="col-xs-offset-1 col-xs-10 col-md-offset-3 col-md-6">
+                <div class="text-center">
+                    <div id="btn-show-content" class="toggle-map-content pointer-events-auto">
+                        <i class="fa fa-info-circle"></i>&nbsp;&nbsp; Show info
+                    </div>
+                </div>
+                <div id="map-content" class="pointer-events-auto">
+                    <div class="row text-center">
+                        <div class="col-md-12">
+                            <div class="text-center hidden-sm hidden-xs">
+                                <h3>How do I get there?</h3>
+                                <p>It's easier than you think!<br><br>
+                                   34 MacBeth St, Braeside VIC 3195<br>
+                                    📞 0438 394 972</p>
+                            </div>
+                            <div class="text-center hidden-md hidden-lg">
+                                <h3>BOATROCKER</h3>
+                                <p>Brewers & Distillers<br>
+                                   34 MacBeth St, Braeside VIC 3195<br>
+                                   📞 0438 394 972</p>
+                                <h4>How do I get there?</h4>
+                                <p>It's easier than you think!</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row text-center">
+                        <div class="col-md-6" style="padding: 5px;">
+                            <a class="btn btn-fill btn-small"
+                            href="https://m.uber.com/?action=setPickup&client_id=FElMSafRP_AXFuiB2g0RR6xliZyEQwX6&pickup=my_location&dropoff[formatted_address]=Boatrocker%20Brewers%20and%20Distillers&dropoff[latitude]=-38.00309851393173&dropoff[longitude]=145.1129707168359""><i
+                                    class="fa fa-taxi"></i>&nbsp;&nbsp;Book Uber</a>
+                        </div>
+                        <div class="col-md-6" style="padding: 5px;">
+                            <a class="btn btn-accent btn-small" id="btn-show-map"><i class="fa fa-map-marker"></i>&nbsp;&nbsp;Show
+                                map</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="rsvp text-center" id="rsvp">
+
+    <div id="rsvp-modal" class="modal fade" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span>&times;</span>
+                    </button>
+                    <div class="section-padding">
+                        <h3>Thank you!</h3>
+                        <p>We are glad to see you join us in celebration.</p>
+                        <div id="add-to-cal0"></div>
+                    </div>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+
+    <div class="container">
+        <div class="row">
+            <div id="rsvpSection" class="col-md-6 col-md-offset-3">
+                <h3>What are you waiting for?</h3>
+                <h4>We would greatly appreciate if you could RSVP before the 1st of November '23</h4>
+                <form id="rsvp-form" class="rsvp-form" action="" method="POST">
+                    <div class="row">
+                        <div class="col-md-6 col-sm-6">
+                            <div class="form-input-group">
+                                <i class="fa fa-envelope"></i><input type="email" name="email" class=""
+                                                                     placeholder="Your email"
+                                                                     required>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-sm-6">
+                            <div class="form-input-group">
+                                <i class="fa fa-user"></i><input name="name" class="" placeholder="Your name"
+                                                                 required>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 col-sm-6">
+                            <div class="form-input-group">
+                                <i class="fa fa-users"></i><input type="number" name="extras" class="" min="0"
+                                                                  max="4"
+                                                                  placeholder="Plus one qty"
+                                                                  required>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-sm-6">
+                            <div class="form-input-group">
+                                <i class="fa fa-key"></i><input name="invite_code" id="invite_code" class=""
+                                                                min="0"
+                                                                placeholder="Invite code"
+                                                                required>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12 col-sm-12">
+                            <div class="form-input-group" id="guests-group" style="display: none">
+                                <i class="fa fa-users"></i><input name="guests" class="" placeholder="Your plus one's name(s)">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12 col-sm-12">
+                            <h4>Will you also be joining us at any of the following events?</h4>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 col-sm-6 text-left">
+                            <div class="checkbox" title="Ben Sorensen is guaranteed to be as raunchy as ever 🦵">
+                                <label>
+                                    &ensp;<input type="checkbox" name="trivia" class="" > Attending Trivia Night 🏫
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-sm-6 text-left">
+                            <div class="checkbox" title="A Kiwi Brewery that identifies as a Yankee?🧢 Sign me up!">
+                                <label>
+                                    &ensp;<input type="checkbox" name="liberty" class=""> Attending LIBERTY🗽
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-sm-6 text-left">
+                            <div class="checkbox" title="Craft Beer, Wine, Spirits....good food and good people? Where do I sign! 🍻">
+                                <label>
+                                    &ensp;<input type="checkbox" name="mates" class=""> Attending Mates 🤜🤛
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12" id="alert-wrapper"></div>
+                    </div>
+                    <button class="btn-fill rsvp-btn" id="rsvpButton" title="Click here to confirm your attendance">
+                        I'll be there!
+                    </button>
+                </form>
+            </div>
+            <div id="rsvp-completed" style="display: none">
+                <h3>Thank you! We have your submission.</h3>
+                <p>We are glad to see you join us in celebration.</p>
+                <div id="add-to-cal1"></div>
+            </div>
+        </div>
+        
+    </div>
+    <script>
+        const rsvpForm = document.getElementById('rsvpSection');
+        const rsvpCompleted = document.getElementById('rsvp-completed');
+        const extrasInput = document.querySelector('input[name="extras"]');
+        const guestsGroup = document.getElementById('guests-group');
+        const guestsInput = document.querySelector('input[name="guests"]');
+        const rsvpButton = document.getElementById('rsvpButton');
+    
+        extrasInput.addEventListener('input', () => {
+            const extrasValue = parseInt(extrasInput.value);
+            if (extrasValue === 1) {
+                guestsInput.placeholder = "Your plus one's name";
+            } else {
+                guestsInput.placeholder = "The names of your plus ones";
+            }
+
+            if (extrasValue > 0) {
+                guestsGroup.style.display = 'block';
+                guestsInput.required = true;
+                rsvpButton.textContent = "We'll be there!";
+                rsvpButton.title = "Click here to confirm your attendance with guests";
+            } else {
+                guestsGroup.style.display = 'none';
+                guestsInput.required = false;
+                rsvpButton.textContent = "I'll be there!";
+                rsvpButton.title = "Click here to confirm your attendance";
+            }
+        });
+    </script>
+</section>
+
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 text-center content">
+                <span class="to-top-wrapper"><a href="#top" class="to-top"><i class="fa fa-angle-up"></i></a></span>
+                <p>Crafted by Joshua with lots of <span class="fa fa-heart pulse2"></span> for Kahlia</p>
+            </div>
+        </div>
+    </div>
+</footer>
+<script src="js/vendor/jquery-1.11.2.min.js" onerror="loadJsFromCDN('jquery.js')"></script>
+<script src="node_modules/waypoints/lib/jquery.waypoints.min.js" onerror="loadJsFromCDN('waypoints.js')"></script>
+<script src="js/jquery.fancybox.pack.js"></script>
+<script src="js/vendor/bootstrap.min.js"></script>
+<script src="js/jquery.flexslider-min.js"></script>
+<script src="js/jquery.mb.YTPlayer.min.js"></script>
+<script src="js/vendor/ouical.js"></script>
+<script src="js/scripts.min.js"></script>
+<script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyARd3zmyomZFKYyRaphCZavWR09mCHu05s&callback=initMap"></script>
+</body>
+</htm
