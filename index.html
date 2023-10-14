@@ -396,7 +396,7 @@
 
     <div class="container">
         <div class="row">
-            <div id="rsvpSection" class="col-md-6 col-md-offset-3">
+            <div id="rsvpSection"  style="display: block" class="col-md-6 col-md-offset-3">
                 <h3>What are you waiting for?</h3>
                 <h4>We would greatly appreciate if you could RSVP before the 1st of November '23</h4>
                 <form id="rsvp-form" class="rsvp-form" action="" method="POST">
@@ -443,32 +443,34 @@
                     <div class="row">
                         <div class="col-md-12 col-sm-12">
                             <h4>Will you also be joining us at any of the following events?</h4>
+                        </div>
                     </div>
                     <div class="row">
                         <div class="col-md-6 col-sm-6 text-left">
                             <div class="checkbox" title="Ben Sorensen is guaranteed to be as raunchy as ever 🦵">
                                 <label>
-                                    &ensp;<input type="checkbox" name="trivia" class="" > Attending Trivia Night 🏫
+                                    &emsp;<input type="checkbox" name="trivia" class="" > Attending Trivia Night 🏫
                                 </label>
                             </div>
                         </div>
                         <div class="col-md-6 col-sm-6 text-left">
                             <div class="checkbox" title="A Kiwi Brewery that identifies as a Yankee?🧢 Sign me up!">
                                 <label>
-                                    &ensp;<input type="checkbox" name="liberty" class=""> Attending LIBERTY🗽
+                                    &emsp;<input type="checkbox" name="liberty" class=""> Attending LIBERTY🗽
                                 </label>
                             </div>
                         </div>
                         <div class="col-md-6 col-sm-6 text-left">
                             <div class="checkbox" title="Craft Beer, Wine, Spirits....good food and good people? Where do I sign! 🍻">
                                 <label>
-                                    &ensp;<input type="checkbox" name="mates" class=""> Attending Mates 🤜🤛
+                                    &emsp;<input type="checkbox" name="mates" class=""> Attending Mates 🤜🤛
                                 </label>
                             </div>
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-md-12" id="alert-wrapper"></div>
+                        <div class="col-md-12" id="alert-wrapper">
+                        </div>
                     </div>
                     <button class="btn-fill rsvp-btn" id="rsvpButton" title="Click here to confirm your attendance">
                         I'll be there!
@@ -481,7 +483,6 @@
                 <div id="add-to-cal1"></div>
             </div>
         </div>
-        
     </div>
     <script>
         const rsvpForm = document.getElementById('rsvpSection');
@@ -535,4 +536,4 @@
 <script async defer
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyARd3zmyomZFKYyRaphCZavWR09mCHu05s&callback=initMap"></script>
 </body>
-</htm
+</html>
